@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nynx — Terms of Use & Privacy Policy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg:        #0d0f14;
+      --surface:   #13161d;
+      --border:    #1f2330;
+      --accent:    #4f8ef7;
+      --muted:     #4a5068;
+      --body:      #c8cdd8;
+      --heading:   #e8ebf2;
+      --white:     #ffffff;
+      --warn:      #e05c5c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--body);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0 24px;
+      text-align: center;
+    }
+
+    .logo-mark {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--white);
+    }
+
+    .logo-mark span {
+      color: var(--accent);
+    }
+
+    .doc-label {
+      margin-top: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .effective {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── LAYOUT ── */
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+    }
+
+    .toc-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    @media (max-width: 540px) {
+      .toc-list { grid-template-columns: 1fr; }
+    }
+
+    .toc-list a {
+      color: var(--body);
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      transition: color 0.15s;
+    }
+
+    .toc-list a:hover { color: var(--accent); }
+
+    .toc-list .num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ── PART DIVIDER ── */
+    .part-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0 32px;
+    }
+
+    .part-header::before {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .part-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .part-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--heading);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    h2 .sec-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--body);
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 10px 0 14px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 7px;
+      color: var(--body);
+      font-size: 14px;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+      font-size: 12px;
+      top: 2px;
+    }
+
+    /* ── CAPS WARNING ── */
+    .caps-block {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--body);
+      background: var(--surface);
+      border-left: 3px solid var(--muted);
+      border-radius: 0 4px 4px 0;
+      padding: 14px 18px;
+      margin-top: 8px;
+    }
+
+    /* ── CONTACT BLOCK ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+
+    .contact-block p {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── ATTORNEY NOTICE ── */
+    .attorney-notice {
+      display: none; /* removed per attorney approval */
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    .footer-logo {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; color: black; }
+      header, footer { border-color: #ccc; }
+      .toc { background: #f5f5f5; border-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">NY<span>NX</span></div>
+  <div class="doc-label">Terms of Use &amp; Privacy Policy</div>
+  <div class="effective">A service of Priviscribe.ai &nbsp;/&nbsp; Anescribe, LLC &nbsp;&nbsp;·&nbsp;&nbsp; Effective: June 10, 2026</div>
+</header>
+
+<div class="wrapper">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1"><span class="num">01</span> About the Service</a></li>
+      <li><a href="#s2"><span class="num">02</span> Eligibility</a></li>
+      <li><a href="#s3"><span class="num">03</span> Permitted Use</a></li>
+      <li><a href="#s4"><span class="num">04</span> No Guarantee of Delivery or Security</a></li>
+      <li><a href="#s5"><span class="num">05</span> Sender Responsibility</a></li>
+      <li><a href="#s6"><span class="num">06</span> Limitation of Liability</a></li>
+      <li><a href="#s7"><span class="num">07</span> Disclaimer of Warranties</a></li>
+      <li><a href="#s8"><span class="num">08</span> HIPAA Notice</a></li>
+      <li><a href="#s9"><span class="num">09</span> Modifications</a></li>
+      <li><a href="#s10"><span class="num">10</span> Governing Law</a></li>
+      <li><a href="#s11"><span class="num">11</span> Information We Collect</a></li>
+      <li><a href="#s12"><span class="num">12</span> How We Use Your Information</a></li>
+      <li><a href="#s13"><span class="num">13</span> Data Retention &amp; Deletion</a></li>
+      <li><a href="#s14"><span class="num">14</span> Third-Party Service Providers</a></li>
+      <li><a href="#s15"><span class="num">15</span> Security</a></li>
+      <li><a href="#s16"><span class="num">16</span> Cookies &amp; Tracking</a></li>
+      <li><a href="#s17"><span class="num">17</span> Children's Privacy</a></li>
+      <li><a href="#s18"><span class="num">18</span> Your Rights</a></li>
+      <li><a href="#s19"><span class="num">19</span> Contact</a></li>
+    </ul>
+  </div>
+
+  <p>Please read this document carefully before using Nynx ("the Service"), accessible at nynx.app and nynx.nyc. By using the Service, you agree to these Terms of Use and acknowledge our Privacy Policy as set forth below. If you do not agree, do not use the Service.</p>
+
+  <!-- ═══════════════════════════ PART ONE ═══════════════════════════ -->
+  <div class="part-header"><span class="part-label">Part One — Terms of Use</span></div>
+
+  <section id="s1">
+    <h2><span class="sec-num">01</span> About the Service</h2>
+    <p>Nynx is a secure, ephemeral Social Security Number (SSN) transmission service operated by Anescribe, LLC, a New York limited liability company, doing business under the Priviscribe.ai brand. The Service allows a sender to transmit an SSN to a designated recipient via a time-limited, single-use secure link delivered by email.</p>
+  </section>
+
+  <section id="s2">
+    <h2><span class="sec-num">02</span> Eligibility</h2>
+    <p>You must be at least 18 years of age to use the Service. By using Nynx, you represent and warrant that you are 18 or older and have the legal authority to share the SSN you submit — either because it is your own, or because you have explicit written authorization from the individual whose SSN you are transmitting.</p>
+  </section>
+
+  <section id="s3">
+    <h2><span class="sec-num">03</span> Permitted Use</h2>
+    <p>The Service is intended solely for lawful purposes, including but not limited to employment onboarding, professional credentialing, healthcare administration, and other legitimate identity verification workflows. You agree not to use the Service to:</p>
+    <ul>
+      <li>Transmit an SSN without the knowledge or consent of the individual to whom it belongs;</li>
+      <li>Facilitate identity theft, fraud, or any other criminal activity;</li>
+      <li>Circumvent any security or access control measures;</li>
+      <li>Harvest, scrape, or collect data from the Service;</li>
+      <li>Use automated systems or bots to interact with the Service.</li>
+    </ul>
+  </section>
+
+  <section id="s4">
+    <h2><span class="sec-num">04</span> No Guarantee of Delivery or Security</h2>
+    <p>While Nynx employs technical safeguards including encrypted transmission and automatic deletion, no electronic transmission can be guaranteed to be completely secure. Anescribe, LLC does not warrant that the Service is free from vulnerabilities, interruptions, or unauthorized access. You use the Service at your own risk.</p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="sec-num">05</span> Sender Responsibility</h2>
+    <p>You, as the sender, bear sole responsibility for: (a) ensuring you have lawful authority to transmit the SSN; (b) the accuracy of the recipient email address you provide; and (c) any consequences arising from misdirected transmissions due to incorrect recipient information. Anescribe, LLC is not responsible for SSNs delivered to an incorrect email address due to sender error.</p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="sec-num">06</span> Limitation of Liability</h2>
+    <div class="caps-block">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ANESCRIBE, LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO DATA BREACHES, UNAUTHORIZED ACCESS, OR MISDIRECTED TRANSMISSIONS. IN NO EVENT SHALL OUR AGGREGATE LIABILITY EXCEED $100.</div>
+  </section>
+
+  <section id="s7">
+    <h2><span class="sec-num">07</span> Disclaimer of Warranties</h2>
+    <div class="caps-block">THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</div>
+  </section>
+
+  <section id="s8">
+    <h2><span class="sec-num">08</span> HIPAA Notice</h2>
+    <p>Nynx is not designed or marketed as a HIPAA-covered service. SSNs alone do not constitute Protected Health Information (PHI) under HIPAA. However, if you are a covered entity or business associate and intend to use Nynx in a manner that may implicate HIPAA, you do so at your own discretion and risk. Anescribe, LLC does not execute Business Associate Agreements in connection with Nynx.</p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="sec-num">09</span> Modifications to the Service and Terms</h2>
+    <p>Anescribe, LLC reserves the right to modify, suspend, or discontinue the Service at any time without notice. We may update these Terms at any time. Continued use of the Service after any modification constitutes acceptance of the updated Terms.</p>
+  </section>
+
+  <section id="s10">
+    <h2><span class="sec-num">10</span> Governing Law</h2>
+    <p>These Terms shall be governed by the laws of the State of New York, without regard to conflict of law principles. Any disputes shall be resolved exclusively in the state or federal courts located in New York County, New York.</p>
+  </section>
+
+  <!-- ═══════════════════════════ PART TWO ═══════════════════════════ -->
+  <div class="part-header"><span class="part-label">Part Two — Privacy Policy</span></div>
+
+  <section id="s11">
+    <h2><span class="sec-num">11</span> Information We Collect</h2>
+    <p>When you use Nynx, we collect the following information solely for the purpose of transmitting the secure link:</p>
+    <ul>
+      <li>Sender initials (up to 4 characters) — used for display purposes only, not stored long-term;</li>
+      <li>Recipient email address — used to deliver the secure link;</li>
+      <li>The SSN you submit — encrypted and stored temporarily as described below.</li>
+    </ul>
+    <p>We do not collect your name, physical address, payment information, or any other personally identifiable information beyond what is listed above.</p>
+  </section>
+
+  <section id="s12">
+    <h2><span class="sec-num">12</span> How We Use Your Information</h2>
+    <p>The information you provide is used exclusively to:</p>
+    <ul>
+      <li>Encrypt and transmit the SSN to the designated recipient via a time-limited secure link;</li>
+      <li>Deliver the link to the recipient email address via our email delivery provider (Amazon Web Services Simple Email Service);</li>
+      <li>Enforce the one-time view and 5-day expiration constraints.</li>
+    </ul>
+    <p>We do not use your information for marketing, advertising, analytics profiling, or any purpose beyond the core transmission function.</p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="sec-num">13</span> Data Retention &amp; Deletion</h2>
+    <p>The submitted SSN is stored in encrypted form only for the duration necessary to enable transmission. Specifically:</p>
+    <ul>
+      <li>The SSN is deleted from our servers after it has been viewed twice by the recipient, OR after 5 days from transmission — whichever occurs first.</li>
+      <li>Recipient email addresses and sender initials are not retained after the link expires or is consumed.</li>
+    </ul>
+    <p>We do not maintain any long-term database of submitted SSNs.</p>
+  </section>
+
+  <section id="s14">
+    <h2><span class="sec-num">14</span> Third-Party Service Providers</h2>
+    <p>We use Amazon Web Services (AWS) for email delivery and infrastructure. AWS may process transmitted data as a data processor on our behalf, subject to AWS's own data processing terms and security certifications. We do not sell or share your data with any other third parties.</p>
+  </section>
+
+  <section id="s15">
+    <h2><span class="sec-num">15</span> Security</h2>
+    <p>We employ industry-standard encryption in transit (TLS) and at rest. Access to submitted data is restricted and time-limited. However, as noted in the Terms of Use above, no security measure is absolute, and we cannot guarantee that unauthorized third parties will never be able to defeat our security measures.</p>
+  </section>
+
+  <section id="s16">
+    <h2><span class="sec-num">16</span> Cookies &amp; Tracking</h2>
+    <p>Nynx does not use tracking cookies, advertising pixels, or behavioral analytics tools. We may collect basic server logs (IP addresses, timestamps) for security and operational purposes only. These logs are not shared with third parties and are retained for no longer than 30 days.</p>
+  </section>
+
+  <section id="s17">
+    <h2><span class="sec-num">17</span> Children's Privacy</h2>
+    <p>The Service is not directed to individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has submitted information through the Service, please contact us immediately.</p>
+  </section>
+
+  <section id="s18">
+    <h2><span class="sec-num">18</span> Your Rights</h2>
+    <p>Because we do not retain SSNs or personal information beyond the transmission window, there is typically no data to access, correct, or delete after expiration. If you have a concern about data you believe may still be stored, contact us at the address below and we will respond within a reasonable time.</p>
+  </section>
+
+  <section id="s19">
+    <h2><span class="sec-num">19</span> Contact</h2>
+    <p>For questions about these Terms or this Privacy Policy, contact:</p>
+    <div class="contact-block">
+      <p><strong>Anescribe, LLC / Priviscribe.ai</strong></p>
+      <p>New York, NY</p>
+      <p><a href="mailto:support@elescan.com">support@elescan.com</a></p>
+    </div>
+  </section>
+
+</div><!-- /.wrapper -->
+
+<footer>
+  <div class="footer-logo">NYNX</div>
+  <p>A service of <a href="https://priviscribe.ai">Priviscribe.ai</a> &nbsp;/&nbsp; Anescribe, LLC &nbsp;·&nbsp; New York, NY</p>
+  <p>&copy; 2026 Anescribe, LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
